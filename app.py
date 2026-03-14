@@ -12,6 +12,8 @@ app.config["SESSION_COOKIE_SAMESITE"] = "None"
 app.config["SESSION_COOKIE_SECURE"] = True
 CORS(app, supports_credentials=True, origins=[
     "http://localhost:3000",
+    "https://python-tutor-frontend.vercel.app",
+    "https://python-tutor-frontend-git-main-dzmaddy-devs-projects.vercel.app",
     "https://python-tutor-frontend-4l9hjmkmk-dzmaddy-devs-projects.vercel.app"
 ])
 bcrypt = Bcrypt(app)
