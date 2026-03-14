@@ -1,0 +1,188 @@
+{
+  "beginner": [
+    {
+      "id": 1,
+      "title": "Hello World",
+      "theory": "Every Python program starts with printing output. The print() function displays text on the screen. It is the first thing every programmer learns.",
+      "example": "print('Hello, World!')\nprint('My name is Aryan')\nprint('I am learning Python')"
+    },
+    {
+      "id": 2,
+      "title": "Variables",
+      "theory": "A variable is a container that stores a value. You create a variable by giving it a name and assigning a value using =. Variable names must start with a letter or underscore, and cannot have spaces.",
+      "example": "name = 'Aryan'\nage = 19\nheight = 5.9\nis_student = True\n\nprint(name)\nprint(age)\nprint(height)\nprint(is_student)"
+    },
+    {
+      "id": 3,
+      "title": "Data Types",
+      "theory": "Python has several built-in data types:\n- int: whole numbers (1, 42, -5)\n- float: decimal numbers (3.14, 2.5)\n- str: text in quotes ('hello')\n- bool: True or False\n\nUse type() to check the type of any value.",
+      "example": "x = 42\ny = 3.14\nz = 'Python'\nflag = True\n\nprint(type(x))\nprint(type(y))\nprint(type(z))\nprint(type(flag))"
+    },
+    {
+      "id": 4,
+      "title": "User Input",
+      "theory": "The input() function pauses your program and waits for the user to type something. It always returns a string, so use int() or float() to convert it to a number if needed.",
+      "example": "name = 'Aryan'\nage = 19\n\nprint('Hello,', name)\nprint('You are', age, 'years old')\nprint('Next year you will be', age + 1)"
+    },
+    {
+      "id": 5,
+      "title": "Arithmetic Operators",
+      "theory": "Python supports all basic math operations:\n+ addition\n- subtraction\n* multiplication\n/ division (returns float)\n// floor division (returns int)\n% modulus (remainder)\n** power (exponent)",
+      "example": "a = 15\nb = 4\n\nprint('Add:', a + b)\nprint('Subtract:', a - b)\nprint('Multiply:', a * b)\nprint('Divide:', a / b)\nprint('Floor Divide:', a // b)\nprint('Remainder:', a % b)\nprint('Power:', a ** b)"
+    },
+    {
+      "id": 6,
+      "title": "String Operations",
+      "theory": "Strings are sequences of characters. You can:\n- Concatenate with +\n- Repeat with *\n- Get length with len()\n- Access characters with index []\n- Slice with [start:end]\n- Use f-strings for formatting",
+      "example": "s = 'Hello, Python!'\n\nprint(len(s))\nprint(s[0])\nprint(s[-1])\nprint(s[0:5])\nprint(s.upper())\nprint(s.lower())\nprint(s.replace('Python', 'World'))\nprint(s.split(','))\n\nname = 'Aryan'\nage = 19\nprint(f'My name is {name} and I am {age} years old')"
+    },
+    {
+      "id": 7,
+      "title": "If / Else",
+      "theory": "Conditional statements let your program make decisions. Use if to check a condition, elif for additional conditions, and else as the default. Indentation (4 spaces) is required inside each block.",
+      "example": "marks = 85\n\nif marks >= 90:\n    print('Grade: A')\nelif marks >= 75:\n    print('Grade: B')\nelif marks >= 60:\n    print('Grade: C')\nelif marks >= 40:\n    print('Grade: D')\nelse:\n    print('Grade: F - Failed')\n\nprint('Marks:', marks)"
+    },
+    {
+      "id": 8,
+      "title": "Comparison Operators",
+      "theory": "Comparison operators compare two values and return True or False:\n== equal to\n!= not equal to\n> greater than\n< less than\n>= greater than or equal\n<= less than or equal",
+      "example": "x = 10\ny = 20\n\nprint(x == y)\nprint(x != y)\nprint(x > y)\nprint(x < y)\nprint(x >= 10)\nprint(y <= 20)\n\n# Chained comparison\nage = 19\nprint(18 <= age <= 25)"
+    },
+    {
+      "id": 9,
+      "title": "Logical Operators",
+      "theory": "Logical operators combine conditions:\n- and: both conditions must be True\n- or: at least one must be True\n- not: reverses the condition",
+      "example": "age = 20\nhas_id = True\n\n# and - both must be true\nif age >= 18 and has_id:\n    print('Entry allowed')\n\n# or - at least one true\nday = 'Saturday'\nif day == 'Saturday' or day == 'Sunday':\n    print('It is the weekend!')\n\n# not - reverses\nis_raining = False\nif not is_raining:\n    print('Go outside!')"
+    },
+    {
+      "id": 10,
+      "title": "For Loop",
+      "theory": "A for loop repeats a block of code for each item in a sequence. The range() function generates a sequence of numbers. range(5) gives 0,1,2,3,4. range(1,6) gives 1,2,3,4,5. range(0,10,2) gives 0,2,4,6,8.",
+      "example": "# Loop with range\nfor i in range(5):\n    print('Count:', i)\n\nprint('---')\n\n# Loop through a list\nfruits = ['apple', 'banana', 'cherry']\nfor fruit in fruits:\n    print(fruit)\n\nprint('---')\n\n# Loop through a string\nfor char in 'Python':\n    print(char, end=' ')"
+    },
+    {
+      "id": 11,
+      "title": "While Loop",
+      "theory": "A while loop keeps running as long as its condition is True. Be careful — if the condition never becomes False, you get an infinite loop! Always make sure the loop can eventually stop.",
+      "example": "# Basic while loop\ncount = 1\nwhile count <= 5:\n    print('Count:', count)\n    count += 1\n\nprint('---')\n\n# Countdown\nn = 5\nwhile n > 0:\n    print(n)\n    n -= 1\nprint('Blast off!')"
+    },
+    {
+      "id": 12,
+      "title": "Break and Continue",
+      "theory": "break immediately exits the loop, even if the condition is still True. continue skips the rest of the current iteration and jumps to the next one. pass does nothing — it is a placeholder.",
+      "example": "# break example\nfor i in range(10):\n    if i == 5:\n        break\n    print(i, end=' ')\nprint('\\nLoop ended at 5')\n\nprint('---')\n\n# continue example\nfor i in range(10):\n    if i % 2 == 0:\n        continue\n    print(i, end=' ')\nprint('\\nOnly odd numbers')"
+    }
+  ],
+  "intermediate": [
+    {
+      "id": 13,
+      "title": "Lists",
+      "theory": "A list stores multiple values in a single variable. Lists are ordered, changeable, and allow duplicates. You can add, remove, sort, and slice lists. Index starts at 0. Negative index -1 means the last element.",
+      "example": "nums = [3, 1, 4, 1, 5, 9, 2, 6]\n\nprint('List:', nums)\nprint('Length:', len(nums))\nprint('First:', nums[0])\nprint('Last:', nums[-1])\nprint('Slice:', nums[2:5])\n\nnums.append(7)\nprint('After append:', nums)\n\nnums.sort()\nprint('Sorted:', nums)\n\nprint('Max:', max(nums))\nprint('Min:', min(nums))\nprint('Sum:', sum(nums))"
+    },
+    {
+      "id": 14,
+      "title": "Tuples",
+      "theory": "A tuple is like a list but immutable — it cannot be changed after creation. Tuples use () instead of []. Use tuples for data that should not change, like coordinates or RGB colors. They are faster than lists.",
+      "example": "# Creating tuples\ncoords = (10, 20)\ncolors = ('red', 'green', 'blue')\nperson = ('Aryan', 19, 'Delhi')\n\nprint(coords)\nprint(colors[0])\nprint(len(person))\n\n# Unpacking\nname, age, city = person\nprint(f'{name} is {age} from {city}')\n\n# Single element tuple needs comma\nsingle = (42,)\nprint(type(single))"
+    },
+    {
+      "id": 15,
+      "title": "Dictionaries",
+      "theory": "A dictionary stores data as key-value pairs. Keys must be unique. Use {} to create one. Access values using dict[key]. Use .get() to safely access keys that may not exist (returns None instead of error).",
+      "example": "student = {\n    'name': 'Aryan',\n    'age': 19,\n    'marks': 90,\n    'city': 'Delhi'\n}\n\nprint(student['name'])\nprint(student.get('marks'))\nprint(student.get('phone', 'Not found'))\n\n# Add / update\nstudent['email'] = 'aryan@example.com'\nstudent['age'] = 20\n\n# Loop through\nfor key, value in student.items():\n    print(f'{key}: {value}')"
+    },
+    {
+      "id": 16,
+      "title": "Sets",
+      "theory": "A set stores unique values with no duplicates. Sets are unordered, so you cannot access by index. Sets are great for removing duplicates, and for set operations like union, intersection, and difference.",
+      "example": "# Creating sets\nfruits = {'apple', 'banana', 'cherry', 'apple'}\nprint(fruits)  # apple appears only once\n\n# Add and remove\nfruits.add('mango')\nfruits.discard('banana')\nprint(fruits)\n\n# Set operations\na = {1, 2, 3, 4}\nb = {3, 4, 5, 6}\n\nprint('Union:', a | b)\nprint('Intersection:', a & b)\nprint('Difference:', a - b)\n\n# Remove duplicates from list\nnums = [1, 2, 2, 3, 3, 3, 4]\nprint('Unique:', list(set(nums)))"
+    },
+    {
+      "id": 17,
+      "title": "Functions",
+      "theory": "A function is a reusable block of code. Define it with def. Call it by name. Parameters are inputs, return sends back a result. Functions help you avoid repeating code and make programs easier to read.",
+      "example": "# Basic function\ndef greet(name):\n    return 'Hello, ' + name + '!'\n\nprint(greet('Aryan'))\nprint(greet('Ravi'))\n\n# Function with default argument\ndef power(base, exp=2):\n    return base ** exp\n\nprint(power(3))\nprint(power(2, 10))\n\n# Function returning multiple values\ndef min_max(lst):\n    return min(lst), max(lst)\n\nlo, hi = min_max([4, 1, 9, 2, 7])\nprint(f'Min: {lo}, Max: {hi}')"
+    },
+    {
+      "id": 18,
+      "title": "List Comprehension",
+      "theory": "List comprehension is a concise way to create lists. Instead of writing a loop and appending, you write it in one line. Syntax: [expression for item in iterable if condition]. The if part is optional.",
+      "example": "# Regular loop vs list comprehension\nnums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n\n# Squares using loop\nsquares = []\nfor x in nums:\n    squares.append(x ** 2)\nprint('Squares:', squares)\n\n# Same using comprehension\nsquares2 = [x**2 for x in nums]\nprint('Squares2:', squares2)\n\n# With condition - only even squares\neven_squares = [x**2 for x in nums if x % 2 == 0]\nprint('Even squares:', even_squares)\n\n# String comprehension\nwords = ['hello', 'world', 'python']\nupper = [w.upper() for w in words]\nprint('Upper:', upper)"
+    },
+    {
+      "id": 19,
+      "title": "Lambda Functions",
+      "theory": "A lambda is a small anonymous function written in one line. Use it when you need a simple function without formally defining it with def. Often used with map(), filter(), and sorted().",
+      "example": "# Lambda basics\nsquare = lambda x: x ** 2\nadd = lambda a, b: a + b\ngreet = lambda name: f'Hello, {name}!'\n\nprint(square(5))\nprint(add(3, 4))\nprint(greet('Aryan'))\n\n# Lambda with map()\nnums = [1, 2, 3, 4, 5]\ndoubled = list(map(lambda x: x * 2, nums))\nprint('Doubled:', doubled)\n\n# Lambda with filter()\nevens = list(filter(lambda x: x % 2 == 0, nums))\nprint('Evens:', evens)\n\n# Lambda with sorted()\nstudents = [('Aryan', 90), ('Ravi', 85), ('Sneha', 95)]\nsorted_students = sorted(students, key=lambda s: s[1], reverse=True)\nprint('Ranked:', sorted_students)"
+    },
+    {
+      "id": 20,
+      "title": "Exception Handling",
+      "theory": "Exceptions are errors that happen while a program runs. Use try/except to handle them gracefully instead of crashing. You can catch specific errors or use a general except. Use finally for code that always runs.",
+      "example": "# Basic try/except\ntry:\n    result = 10 / 0\nexcept ZeroDivisionError:\n    print('Cannot divide by zero!')\n\n# Multiple exceptions\ntry:\n    x = int('hello')\nexcept ValueError:\n    print('Invalid number!')\nexcept TypeError:\n    print('Wrong type!')\n\n# Finally always runs\ntry:\n    nums = [1, 2, 3]\n    print(nums[10])\nexcept IndexError as e:\n    print('Error:', e)\nfinally:\n    print('This always runs')"
+    },
+    {
+      "id": 21,
+      "title": "File Handling",
+      "theory": "Python can read and write files using the open() function. Always use with open() so the file closes automatically. Modes: r=read, w=write (overwrites), a=append, r+=read and write.",
+      "example": "# Write to a file\nwith open('test.txt', 'w') as f:\n    f.write('Hello from Python!\\n')\n    f.write('This is line 2\\n')\n    f.write('This is line 3\\n')\n\nprint('File written!')\n\n# Read the file\nwith open('test.txt', 'r') as f:\n    content = f.read()\nprint('Content:')\nprint(content)\n\n# Read line by line\nwith open('test.txt', 'r') as f:\n    for line in f:\n        print('Line:', line.strip())"
+    },
+    {
+      "id": 22,
+      "title": "Recursion",
+      "theory": "Recursion is when a function calls itself. Every recursive function needs a base case that stops the recursion, and a recursive case that moves toward the base case. Classic examples: factorial, Fibonacci, binary search.",
+      "example": "# Factorial using recursion\ndef factorial(n):\n    if n == 0 or n == 1:  # base case\n        return 1\n    return n * factorial(n - 1)  # recursive case\n\nprint('5! =', factorial(5))\nprint('10! =', factorial(10))\n\n# Fibonacci using recursion\ndef fib(n):\n    if n <= 1:\n        return n\n    return fib(n-1) + fib(n-2)\n\nfor i in range(10):\n    print(fib(i), end=' ')"
+    }
+  ],
+  "advanced": [
+    {
+      "id": 23,
+      "title": "Classes and OOP",
+      "theory": "Object-Oriented Programming (OOP) organizes code into classes and objects. A class is a blueprint. An object is an instance of a class. __init__ is the constructor that runs when you create an object. self refers to the current object.",
+      "example": "class Student:\n    # Class variable (shared by all)\n    school = 'Python Academy'\n\n    def __init__(self, name, marks):\n        # Instance variables (unique to each object)\n        self.name = name\n        self.marks = marks\n\n    def grade(self):\n        if self.marks >= 90:\n            return 'A'\n        elif self.marks >= 75:\n            return 'B'\n        else:\n            return 'C'\n\n    def __str__(self):\n        return f'{self.name} - {self.marks} ({self.grade()})'\n\ns1 = Student('Aryan', 92)\ns2 = Student('Ravi', 78)\n\nprint(s1)\nprint(s2)\nprint('School:', Student.school)"
+    },
+    {
+      "id": 24,
+      "title": "Inheritance",
+      "theory": "Inheritance lets one class (child) take on properties and methods of another (parent). Use super() to call the parent's __init__. The child can override parent methods. This avoids code duplication.",
+      "example": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\n    def speak(self):\n        return 'Some sound'\n\n    def __str__(self):\n        return f'{self.name} ({self.__class__.__name__})'\n\nclass Dog(Animal):\n    def speak(self):\n        return 'Woof!'\n\nclass Cat(Animal):\n    def speak(self):\n        return 'Meow!'\n\nclass Duck(Animal):\n    def speak(self):\n        return 'Quack!'\n\nanimals = [Dog('Bruno'), Cat('Whiskers'), Duck('Donald')]\nfor animal in animals:\n    print(f'{animal} says: {animal.speak()}')"
+    },
+    {
+      "id": 25,
+      "title": "Decorators",
+      "theory": "A decorator is a function that wraps another function to add extra behavior. Use @decorator_name above a function definition. Common uses: logging, timing, authentication, caching.",
+      "example": "import time\n\n# Simple decorator\ndef shout(func):\n    def wrapper(*args, **kwargs):\n        print('--- START ---')\n        result = func(*args, **kwargs)\n        print('--- END ---')\n        return result\n    return wrapper\n\n@shout\ndef greet(name):\n    print(f'Hello, {name}!')\n\ngreet('Aryan')\n\nprint()\n\n# Timer decorator\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        end = time.time()\n        print(f'{func.__name__} took {end-start:.4f}s')\n        return result\n    return wrapper\n\n@timer\ndef count_up(n):\n    total = 0\n    for i in range(n):\n        total += i\n    return total\n\nprint(count_up(1000000))"
+    },
+    {
+      "id": 26,
+      "title": "Generators",
+      "theory": "A generator is a function that yields values one at a time using yield instead of return. It is memory-efficient because it generates values on demand instead of storing them all at once. Use next() or a for loop to get values.",
+      "example": "# Basic generator\ndef count_up(n):\n    i = 0\n    while i < n:\n        yield i\n        i += 1\n\nfor num in count_up(5):\n    print(num, end=' ')\nprint()\n\n# Fibonacci generator\ndef fib_gen():\n    a, b = 0, 1\n    while True:\n        yield a\n        a, b = b, a + b\n\ngen = fib_gen()\nfor _ in range(10):\n    print(next(gen), end=' ')\nprint()\n\n# Generator expression (like list comprehension)\nsquares = (x**2 for x in range(10))\nprint(list(squares))"
+    },
+    {
+      "id": 27,
+      "title": "List, Dict, Set Comprehensions",
+      "theory": "Comprehensions are a Pythonic way to create collections in one line. List comprehension returns a list, dict comprehension returns a dictionary, set comprehension returns a set. All support optional filtering with if.",
+      "example": "nums = range(1, 11)\n\n# List comprehension\nsquares = [x**2 for x in nums]\nprint('List:', squares)\n\n# Dict comprehension\nsq_dict = {x: x**2 for x in nums}\nprint('Dict:', sq_dict)\n\n# Set comprehension\neven_set = {x for x in nums if x % 2 == 0}\nprint('Set:', even_set)\n\n# Nested list comprehension\nmatrix = [[i * j for j in range(1, 4)] for i in range(1, 4)]\nfor row in matrix:\n    print(row)"
+    },
+    {
+      "id": 28,
+      "title": "Map, Filter, Reduce",
+      "theory": "These are functional programming tools:\n- map(func, list): applies func to every element\n- filter(func, list): keeps elements where func returns True\n- reduce(func, list): combines all elements into one value (needs import from functools)",
+      "example": "from functools import reduce\n\nnums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n\n# map - double every number\ndoubled = list(map(lambda x: x * 2, nums))\nprint('Doubled:', doubled)\n\n# filter - keep only evens\nevens = list(filter(lambda x: x % 2 == 0, nums))\nprint('Evens:', evens)\n\n# reduce - sum all numbers\ntotal = reduce(lambda a, b: a + b, nums)\nprint('Sum:', total)\n\n# Chaining all three\nresult = reduce(\n    lambda a, b: a + b,\n    filter(lambda x: x % 2 == 0,\n    map(lambda x: x ** 2, nums))\n)\nprint('Sum of squares of evens:', result)"
+    },
+    {
+      "id": 29,
+      "title": "args and kwargs",
+      "theory": "*args allows a function to accept any number of positional arguments as a tuple. **kwargs allows any number of keyword arguments as a dictionary. You can combine both. This makes functions very flexible.",
+      "example": "# *args\ndef add_all(*args):\n    return sum(args)\n\nprint(add_all(1, 2, 3))\nprint(add_all(10, 20, 30, 40, 50))\n\n# **kwargs\ndef show_info(**kwargs):\n    for key, value in kwargs.items():\n        print(f'{key}: {value}')\n\nshow_info(name='Aryan', age=19, city='Delhi')\n\nprint()\n\n# Combining both\ndef mixed(required, *args, **kwargs):\n    print('Required:', required)\n    print('Args:', args)\n    print('Kwargs:', kwargs)\n\nmixed('hello', 1, 2, 3, name='Aryan', age=19)"
+    },
+    {
+      "id": 30,
+      "title": "Sorting Algorithms",
+      "theory": "Sorting algorithms arrange data in order. Bubble Sort repeatedly swaps adjacent elements. Selection Sort finds the minimum and places it. Merge Sort divides and conquers. Quick Sort picks a pivot and partitions.",
+      "example": "# Bubble Sort\ndef bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr\n\n# Quick Sort\ndef quick_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    pivot = arr[len(arr)//2]\n    left = [x for x in arr if x < pivot]\n    mid = [x for x in arr if x == pivot]\n    right = [x for x in arr if x > pivot]\n    return quick_sort(left) + mid + quick_sort(right)\n\nnums = [64, 34, 25, 12, 22, 11, 90]\nprint('Original:', nums)\nprint('Bubble Sort:', bubble_sort(nums.copy()))\nprint('Quick Sort:', quick_sort(nums))"
+    }
+  ]
+}

@@ -1,0 +1,640 @@
+{
+  "basic": [
+    {
+      "id": 1,
+      "question": "Print 'Hello, World!'",
+      "hint": "Use the print() function",
+      "solution": "print('Hello, World!')"
+    },
+    {
+      "id": 2,
+      "question": "Print your name",
+      "hint": "Use print() with a string",
+      "solution": "name = 'Aryan'\nprint(name)"
+    },
+    {
+      "id": 3,
+      "question": "Print numbers from 1 to 10",
+      "hint": "Use a for loop with range(1, 11)",
+      "solution": "for i in range(1, 11):\n    print(i)"
+    },
+    {
+      "id": 4,
+      "question": "Add two numbers: 5 and 3",
+      "hint": "Use the + operator",
+      "solution": "a = 5\nb = 3\nprint(a + b)"
+    },
+    {
+      "id": 5,
+      "question": "Subtract 4 from 10",
+      "hint": "Use the - operator",
+      "solution": "print(10 - 4)"
+    },
+    {
+      "id": 6,
+      "question": "Multiply 6 and 7",
+      "hint": "Use the * operator",
+      "solution": "print(6 * 7)"
+    },
+    {
+      "id": 7,
+      "question": "Divide 20 by 4",
+      "hint": "Use the / operator",
+      "solution": "print(20 / 4)"
+    },
+    {
+      "id": 8,
+      "question": "Find the remainder when 17 is divided by 5",
+      "hint": "Use the modulus operator %",
+      "solution": "print(17 % 5)"
+    },
+    {
+      "id": 9,
+      "question": "Calculate 2 raised to the power 8",
+      "hint": "Use the ** operator",
+      "solution": "print(2 ** 8)"
+    },
+    {
+      "id": 10,
+      "question": "Print even numbers from 1 to 20",
+      "hint": "Use range(2, 21, 2) or check if i % 2 == 0",
+      "solution": "for i in range(2, 21, 2):\n    print(i)"
+    },
+    {
+      "id": 11,
+      "question": "Print odd numbers from 1 to 20",
+      "hint": "Use range(1, 21, 2)",
+      "solution": "for i in range(1, 21, 2):\n    print(i)"
+    },
+    {
+      "id": 12,
+      "question": "Print the multiplication table of 5",
+      "hint": "Use a for loop from 1 to 10 and multiply by 5",
+      "solution": "for i in range(1, 11):\n    print(f'5 x {i} = {5 * i}')"
+    },
+    {
+      "id": 13,
+      "question": "Check if a number is positive, negative or zero (use 7)",
+      "hint": "Use if, elif, and else",
+      "solution": "n = 7\nif n > 0:\n    print('Positive')\nelif n < 0:\n    print('Negative')\nelse:\n    print('Zero')"
+    },
+    {
+      "id": 14,
+      "question": "Find the largest of two numbers: 45 and 72",
+      "hint": "Use an if-else statement",
+      "solution": "a = 45\nb = 72\nif a > b:\n    print(a)\nelse:\n    print(b)"
+    },
+    {
+      "id": 15,
+      "question": "Find the largest of three numbers: 10, 25, 17",
+      "hint": "Use max() function",
+      "solution": "a, b, c = 10, 25, 17\nprint(max(a, b, c))"
+    },
+    {
+      "id": 16,
+      "question": "Check if a number is even or odd (use 14)",
+      "hint": "Use modulus operator: if n % 2 == 0 it is even",
+      "solution": "n = 14\nif n % 2 == 0:\n    print('Even')\nelse:\n    print('Odd')"
+    },
+    {
+      "id": 17,
+      "question": "Calculate the sum of numbers from 1 to 100",
+      "hint": "Use a loop and keep adding to a total variable",
+      "solution": "total = 0\nfor i in range(1, 101):\n    total += i\nprint(total)"
+    },
+    {
+      "id": 18,
+      "question": "Print the first 10 natural numbers using a while loop",
+      "hint": "Start with i=1, use while i<=10, increment i",
+      "solution": "i = 1\nwhile i <= 10:\n    print(i)\n    i += 1"
+    },
+    {
+      "id": 19,
+      "question": "Convert temperature from Celsius to Fahrenheit (use 37°C)",
+      "hint": "Formula: F = (C * 9/5) + 32",
+      "solution": "celsius = 37\nfahrenheit = (celsius * 9/5) + 32\nprint(fahrenheit)"
+    },
+    {
+      "id": 20,
+      "question": "Find the area of a rectangle with length 8 and width 5",
+      "hint": "Area = length * width",
+      "solution": "length = 8\nwidth = 5\nprint('Area:', length * width)"
+    }
+  ],
+  "intermediate": [
+    {
+      "id": 21,
+      "question": "Find the factorial of 6",
+      "hint": "Multiply numbers from 1 to n using a loop",
+      "solution": "n = 6\nresult = 1\nfor i in range(1, n + 1):\n    result *= i\nprint(result)"
+    },
+    {
+      "id": 22,
+      "question": "Check if a number is prime (use 29)",
+      "hint": "Check if the number has any divisors other than 1 and itself",
+      "solution": "n = 29\nis_prime = True\nfor i in range(2, int(n**0.5) + 1):\n    if n % i == 0:\n        is_prime = False\n        break\nprint('Prime' if is_prime else 'Not Prime')"
+    },
+    {
+      "id": 23,
+      "question": "Print the Fibonacci sequence up to 10 terms",
+      "hint": "Each number = sum of the previous two. Start with 0 and 1.",
+      "solution": "a, b = 0, 1\nfor i in range(10):\n    print(a, end=' ')\n    a, b = b, a + b"
+    },
+    {
+      "id": 24,
+      "question": "Reverse a string: 'Python'",
+      "hint": "Use string slicing with [::-1]",
+      "solution": "s = 'Python'\nprint(s[::-1])"
+    },
+    {
+      "id": 25,
+      "question": "Check if a string is a palindrome (use 'racecar')",
+      "hint": "Compare string with its reverse using [::-1]",
+      "solution": "s = 'racecar'\nif s == s[::-1]:\n    print('Palindrome')\nelse:\n    print('Not a Palindrome')"
+    },
+    {
+      "id": 26,
+      "question": "Count the number of vowels in 'Hello World'",
+      "hint": "Loop through string and check if each character is in 'aeiouAEIOU'",
+      "solution": "s = 'Hello World'\ncount = 0\nfor c in s:\n    if c in 'aeiouAEIOU':\n        count += 1\nprint(count)"
+    },
+    {
+      "id": 27,
+      "question": "Find the largest element in a list [3, 7, 1, 9, 4]",
+      "hint": "Use the max() function",
+      "solution": "nums = [3, 7, 1, 9, 4]\nprint(max(nums))"
+    },
+    {
+      "id": 28,
+      "question": "Calculate the average of a list [10, 20, 30, 40, 50]",
+      "hint": "Average = sum / count",
+      "solution": "nums = [10, 20, 30, 40, 50]\nprint(sum(nums) / len(nums))"
+    },
+    {
+      "id": 29,
+      "question": "Remove duplicates from a list [1, 2, 2, 3, 4, 4, 5]",
+      "hint": "Convert the list to a set, then back to a list",
+      "solution": "nums = [1, 2, 2, 3, 4, 4, 5]\nprint(list(set(nums)))"
+    },
+    {
+      "id": 30,
+      "question": "Sort a list in descending order: [5, 2, 8, 1, 9]",
+      "hint": "Use sorted(nums, reverse=True)",
+      "solution": "nums = [5, 2, 8, 1, 9]\nprint(sorted(nums, reverse=True))"
+    },
+    {
+      "id": 31,
+      "question": "Count how many times 'l' appears in 'hello world'",
+      "hint": "Use string.count(character)",
+      "solution": "s = 'hello world'\nprint(s.count('l'))"
+    },
+    {
+      "id": 32,
+      "question": "Write a function to check if a number is even",
+      "hint": "Use modulus inside a function and return True/False",
+      "solution": "def is_even(n):\n    return n % 2 == 0\n\nprint(is_even(4))\nprint(is_even(7))"
+    },
+    {
+      "id": 33,
+      "question": "Find the sum of all even numbers from 1 to 50",
+      "hint": "Loop through range and add only if i % 2 == 0",
+      "solution": "total = 0\nfor i in range(1, 51):\n    if i % 2 == 0:\n        total += i\nprint(total)"
+    },
+    {
+      "id": 34,
+      "question": "Print all prime numbers from 1 to 50",
+      "hint": "For each number, check if it has no divisors other than 1 and itself",
+      "solution": "for n in range(2, 51):\n    is_prime = True\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            is_prime = False\n            break\n    if is_prime:\n        print(n, end=' ')"
+    },
+    {
+      "id": 35,
+      "question": "Create a dictionary with 3 student names and their marks",
+      "hint": "Use curly braces: {'name': marks}",
+      "solution": "students = {'Aryan': 90, 'Ravi': 85, 'Sneha': 92}\nprint(students)"
+    },
+    {
+      "id": 36,
+      "question": "Find the second largest number in a list [3, 1, 4, 1, 5, 9, 2, 6]",
+      "hint": "Sort the list with set() to remove duplicates, then pick index -2",
+      "solution": "nums = [3, 1, 4, 1, 5, 9, 2, 6]\nunique = sorted(set(nums))\nprint(unique[-2])"
+    },
+    {
+      "id": 37,
+      "question": "Check if two strings are anagrams ('listen' and 'silent')",
+      "hint": "Sort both strings and compare",
+      "solution": "s1 = 'listen'\ns2 = 'silent'\nprint('Anagrams' if sorted(s1) == sorted(s2) else 'Not Anagrams')"
+    },
+    {
+      "id": 38,
+      "question": "Count digits, letters and spaces in 'Hello World 123'",
+      "hint": "Use isdigit(), isalpha(), and isspace() string methods",
+      "solution": "s = 'Hello World 123'\ndigits = letters = spaces = 0\nfor c in s:\n    if c.isdigit(): digits += 1\n    elif c.isalpha(): letters += 1\n    elif c.isspace(): spaces += 1\nprint(f'Letters: {letters}, Digits: {digits}, Spaces: {spaces}')"
+    },
+    {
+      "id": 39,
+      "question": "Find GCD of two numbers (48 and 18)",
+      "hint": "Use the Euclidean algorithm: gcd(a,b) = gcd(b, a%b) until b=0",
+      "solution": "def gcd(a, b):\n    while b:\n        a, b = b, a % b\n    return a\n\nprint(gcd(48, 18))"
+    },
+    {
+      "id": 40,
+      "question": "Merge two dictionaries: {'a':1,'b':2} and {'c':3,'d':4}",
+      "hint": "Use the ** unpacking operator inside a new dict: {**d1, **d2}",
+      "solution": "d1 = {'a': 1, 'b': 2}\nd2 = {'c': 3, 'd': 4}\nmerged = {**d1, **d2}\nprint(merged)"
+    },
+    {
+      "id": 41,
+      "question": "Find all words longer than 4 characters in 'I love Python programming a lot'",
+      "hint": "Split the sentence and filter by len(word) > 4",
+      "solution": "sentence = 'I love Python programming a lot'\nwords = sentence.split()\nresult = [w for w in words if len(w) > 4]\nprint(result)"
+    },
+    {
+      "id": 42,
+      "question": "Print a right-angled star triangle of 5 rows",
+      "hint": "Outer loop controls rows, inner loop prints '*' * i",
+      "solution": "for i in range(1, 6):\n    print('*' * i)"
+    },
+    {
+      "id": 43,
+      "question": "Print a pyramid pattern of 5 rows",
+      "hint": "Use spaces for centering: print(' ' * (n-i) + '*' * (2*i-1))",
+      "solution": "n = 5\nfor i in range(1, n + 1):\n    print(' ' * (n - i) + '*' * (2 * i - 1))"
+    },
+    {
+      "id": 44,
+      "question": "Flatten a nested list: [[1,2],[3,4],[5,6]]",
+      "hint": "Use list comprehension with two for loops",
+      "solution": "nested = [[1, 2], [3, 4], [5, 6]]\nflat = [x for sublist in nested for x in sublist]\nprint(flat)"
+    },
+    {
+      "id": 45,
+      "question": "Find the most frequent element in a list [1,3,2,1,4,1,3]",
+      "hint": "Use max() with key=list.count",
+      "solution": "nums = [1, 3, 2, 1, 4, 1, 3]\nprint(max(nums, key=nums.count))"
+    },
+    {
+      "id": 46,
+      "question": "Swap two variables without using a third variable",
+      "hint": "Use Python tuple unpacking: a, b = b, a",
+      "solution": "a = 10\nb = 20\na, b = b, a\nprint(a, b)"
+    },
+    {
+      "id": 47,
+      "question": "Check if a year is a leap year (use 2024)",
+      "hint": "Divisible by 4, but century years must also be divisible by 400",
+      "solution": "year = 2024\nif (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):\n    print('Leap Year')\nelse:\n    print('Not a Leap Year')"
+    },
+    {
+      "id": 48,
+      "question": "Find all common elements between two lists [1,2,3,4] and [3,4,5,6]",
+      "hint": "Convert both to sets and use intersection (&)",
+      "solution": "a = [1, 2, 3, 4]\nb = [3, 4, 5, 6]\nprint(list(set(a) & set(b)))"
+    },
+    {
+      "id": 49,
+      "question": "Print numbers from 1-20 but skip multiples of 3 using continue",
+      "hint": "Use continue inside the loop when i % 3 == 0",
+      "solution": "for i in range(1, 21):\n    if i % 3 == 0:\n        continue\n    print(i, end=' ')"
+    },
+    {
+      "id": 50,
+      "question": "Generate a list of 5 random numbers between 1 and 100",
+      "hint": "Import random and use random.randint(1, 100) in a loop",
+      "solution": "import random\nnums = [random.randint(1, 100) for _ in range(5)]\nprint(nums)"
+    },
+    {
+      "id": 51,
+      "question": "Check if all elements of a list are positive [3, 5, -1, 8]",
+      "hint": "Use the all() function with a condition",
+      "solution": "nums = [3, 5, -1, 8]\nprint(all(x > 0 for x in nums))"
+    },
+    {
+      "id": 52,
+      "question": "Check if any element of a list is negative [3, 5, -1, 8]",
+      "hint": "Use the any() function with a condition",
+      "solution": "nums = [3, 5, -1, 8]\nprint(any(x < 0 for x in nums))"
+    },
+    {
+      "id": 53,
+      "question": "Convert a list of strings to uppercase: ['hello', 'world', 'python']",
+      "hint": "Use list comprehension with .upper()",
+      "solution": "words = ['hello', 'world', 'python']\nresult = [w.upper() for w in words]\nprint(result)"
+    },
+    {
+      "id": 54,
+      "question": "Create a list of tuples: (number, square) for 1 to 5",
+      "hint": "Use list comprehension: [(x, x**2) for x in range(...)]",
+      "solution": "result = [(x, x**2) for x in range(1, 6)]\nprint(result)"
+    },
+    {
+      "id": 55,
+      "question": "Write a function that returns both the min and max of a list",
+      "hint": "A Python function can return multiple values as a tuple",
+      "solution": "def min_max(lst):\n    return min(lst), max(lst)\n\nlo, hi = min_max([4, 2, 9, 1, 7])\nprint('Min:', lo, 'Max:', hi)"
+    },
+    {
+      "id": 56,
+      "question": "Remove all whitespace from a string '  hello world  '",
+      "hint": "Use .strip() to remove leading/trailing spaces or .replace(' ', '') for all",
+      "solution": "s = '  hello world  '\nprint(s.strip())\nprint(s.replace(' ', ''))"
+    },
+    {
+      "id": 57,
+      "question": "Print the index and value of each item in ['apple','banana','cherry']",
+      "hint": "Use enumerate(list) to get both index and value",
+      "solution": "fruits = ['apple', 'banana', 'cherry']\nfor i, fruit in enumerate(fruits):\n    print(i, fruit)"
+    },
+    {
+      "id": 58,
+      "question": "Write a function with a default argument: greet(name, greeting='Hello')",
+      "hint": "Set default value in function signature: def func(a, b='default')",
+      "solution": "def greet(name, greeting='Hello'):\n    print(f'{greeting}, {name}!')\n\ngreet('Aryan')\ngreet('Ravi', 'Hi')"
+    },
+    {
+      "id": 59,
+      "question": "Find the product of all elements in a list [1,2,3,4,5]",
+      "hint": "Start with result=1 and multiply each element in a loop",
+      "solution": "nums = [1, 2, 3, 4, 5]\nresult = 1\nfor n in nums:\n    result *= n\nprint(result)"
+    },
+    {
+      "id": 60,
+      "question": "Print a number triangle:\n1\n1 2\n1 2 3\n1 2 3 4\n1 2 3 4 5",
+      "hint": "Outer loop for rows, inner loop prints numbers 1 to i",
+      "solution": "for i in range(1, 6):\n    for j in range(1, i + 1):\n        print(j, end=' ')\n    print()"
+    }
+  ],
+  "scenario": [
+    {
+      "id": 101,
+      "question": "🔢 Run-Length Encoder\nInput: 'aabbcc'\nOutput: 'a2b2c2'\n\nCompress a string by replacing consecutive repeated characters with the character followed by its count.",
+      "hint": "Loop through the string, count consecutive same characters, then build the result string",
+      "solution": "s = 'aabbcc'\nresult = ''\ni = 0\nwhile i < len(s):\n    count = 1\n    while i + count < len(s) and s[i + count] == s[i]:\n        count += 1\n    result += s[i] + str(count)\n    i += count\nprint(result)"
+    },
+    {
+      "id": 102,
+      "question": "✨ Magic Number Generator\nA magic number is one where the sum of its digits, repeatedly added, results in 1.\nExample: 19 → 1+9=10 → 1+0=1 ✅\nCheck if 199 is a magic number.",
+      "hint": "Keep summing digits until you get a single digit. If it's 1, it's magic!",
+      "solution": "def digit_sum(n):\n    return sum(int(d) for d in str(n))\n\ndef is_magic(n):\n    while n >= 10:\n        n = digit_sum(n)\n    return n == 1\n\nprint(is_magic(199))\nprint(is_magic(23))"
+    },
+    {
+      "id": 103,
+      "question": "🔐 Caesar Cipher Encoder\nShift each letter by 3 positions.\nInput: 'hello'\nOutput: 'khoor'\n\nEncode the message 'python' using Caesar cipher with shift 3.",
+      "hint": "Use ord() to get ASCII value, shift it, use chr() to convert back. Handle wrap-around with % 26",
+      "solution": "def caesar(text, shift):\n    result = ''\n    for c in text:\n        if c.isalpha():\n            base = ord('a') if c.islower() else ord('A')\n            result += chr((ord(c) - base + shift) % 26 + base)\n        else:\n            result += c\n    return result\n\nprint(caesar('python', 3))\nprint(caesar('khoor', -3))"
+    },
+    {
+      "id": 104,
+      "question": "🏧 ATM Machine Simulator\nStart with balance ₹5000.\nSimulate: deposit 2000, withdraw 1500, withdraw 8000 (should fail).\nPrint balance after each operation.",
+      "hint": "Use a variable for balance. Check if withdrawal amount > balance before allowing it.",
+      "solution": "balance = 5000\n\ndef deposit(amount):\n    global balance\n    balance += amount\n    print(f'Deposited ₹{amount}. Balance: ₹{balance}')\n\ndef withdraw(amount):\n    global balance\n    if amount > balance:\n        print(f'Insufficient funds! Balance: ₹{balance}')\n    else:\n        balance -= amount\n        print(f'Withdrew ₹{amount}. Balance: ₹{balance}')\n\ndeposit(2000)\nwithdraw(1500)\nwithdraw(8000)"
+    },
+    {
+      "id": 105,
+      "question": "📊 Student Grade Calculator\nGiven marks [85, 72, 90, 61, 78], calculate:\n- Total\n- Average\n- Grade (A:90+, B:75+, C:60+, D:below 60)\n- Pass or Fail (pass if average >= 60)",
+      "hint": "Use sum() and len() for total and average. Use if-elif for grade.",
+      "solution": "marks = [85, 72, 90, 61, 78]\ntotal = sum(marks)\naverage = total / len(marks)\n\nif average >= 90:\n    grade = 'A'\nelif average >= 75:\n    grade = 'B'\nelif average >= 60:\n    grade = 'C'\nelse:\n    grade = 'D'\n\nstatus = 'Pass' if average >= 60 else 'Fail'\n\nprint(f'Total: {total}')\nprint(f'Average: {average:.2f}')\nprint(f'Grade: {grade}')\nprint(f'Result: {status}')"
+    },
+    {
+      "id": 106,
+      "question": "🔄 String Reverser with Word Preservation\nInput: 'Hello World Python'\nOutput: 'Python World Hello'\n\nReverse the order of words but keep each word intact.",
+      "hint": "Split the string into words, reverse the list, then join them back",
+      "solution": "s = 'Hello World Python'\nwords = s.split()\nreversed_words = words[::-1]\nprint(' '.join(reversed_words))"
+    },
+    {
+      "id": 107,
+      "question": "🎰 Lucky Number Checker\nA number is lucky if:\n- It is odd\n- Sum of its digits is divisible by 3\n- It is NOT divisible by 5\nCheck: 21, 35, 123, 45",
+      "hint": "Check all three conditions using and/or operators",
+      "solution": "def is_lucky(n):\n    digit_sum = sum(int(d) for d in str(n))\n    return n % 2 != 0 and digit_sum % 3 == 0 and n % 5 != 0\n\nfor num in [21, 35, 123, 45]:\n    print(f'{num}: {\"Lucky\" if is_lucky(num) else \"Not Lucky\"}')"
+    },
+    {
+      "id": 108,
+      "question": "📦 Inventory Manager\nItems: {'apple': 50, 'banana': 30, 'mango': 0, 'grape': 15}\n- Print items that are out of stock\n- Print items with stock below 20\n- Add 'orange': 25 to inventory\n- Increase apple stock by 10",
+      "hint": "Iterate over dictionary items and check values using conditions",
+      "solution": "inventory = {'apple': 50, 'banana': 30, 'mango': 0, 'grape': 15}\n\nprint('Out of stock:')\nfor item, qty in inventory.items():\n    if qty == 0:\n        print(' ', item)\n\nprint('Low stock (below 20):')\nfor item, qty in inventory.items():\n    if 0 < qty < 20:\n        print(' ', item)\n\ninventory['orange'] = 25\ninventory['apple'] += 10\n\nprint('Updated inventory:')\nfor item, qty in inventory.items():\n    print(f'  {item}: {qty}')"
+    },
+    {
+      "id": 109,
+      "question": "🔡 Decode the Pattern\nInput: 'a2b3c1d2'\nOutput: 'aabbbcdd'\n\nExpand the encoded string back to the original.",
+      "hint": "Loop through the string, read a character, then read the digit, repeat the character that many times",
+      "solution": "s = 'a2b3c1d2'\nresult = ''\ni = 0\nwhile i < len(s):\n    char = s[i]\n    count = int(s[i + 1])\n    result += char * count\n    i += 2\nprint(result)"
+    },
+    {
+      "id": 110,
+      "question": "🌡️ Temperature Converter\nConvert a list of temperatures from Celsius to Fahrenheit, Kelvin.\nInput: [0, 25, 37, 100]\nPrint all three values for each.",
+      "hint": "F = C * 9/5 + 32 and K = C + 273.15",
+      "solution": "temps = [0, 25, 37, 100]\nfor c in temps:\n    f = c * 9/5 + 32\n    k = c + 273.15\n    print(f'{c}°C = {f}°F = {k}K')"
+    },
+    {
+      "id": 111,
+      "question": "🧮 Simple Expression Evaluator\nInput: '3+5'\nOutput: 8\n\nParse a string like '10*3' or '20-4' and compute the result without using eval().",
+      "hint": "Find the operator (+,-,*,/) in the string, split on it, convert parts to int, apply the operation",
+      "solution": "def evaluate(expr):\n    for op in ['+', '-', '*', '/']:\n        if op in expr:\n            a, b = expr.split(op)\n            a, b = int(a), int(b)\n            if op == '+': return a + b\n            if op == '-': return a - b\n            if op == '*': return a * b\n            if op == '/': return a / b\n\nprint(evaluate('3+5'))\nprint(evaluate('10*3'))\nprint(evaluate('20-4'))\nprint(evaluate('15/3'))"
+    },
+    {
+      "id": 112,
+      "question": "🏆 Scoreboard Ranker\nScores: {'Aryan': 88, 'Ravi': 95, 'Sneha': 72, 'Pooja': 95, 'Amit': 60}\n- Print scores sorted from highest to lowest\n- Print the rank of each student\n- Handle ties (same rank for same score)",
+      "hint": "Use sorted() with reverse=True. Use a rank counter that only increments when score changes.",
+      "solution": "scores = {'Aryan': 88, 'Ravi': 95, 'Sneha': 72, 'Pooja': 95, 'Amit': 60}\nsorted_scores = sorted(scores.items(), key=lambda x: x[1], reverse=True)\n\nrank = 1\nprev_score = None\nfor i, (name, score) in enumerate(sorted_scores):\n    if score != prev_score:\n        rank = i + 1\n    print(f'Rank {rank}: {name} - {score}')\n    prev_score = score"
+    },
+    {
+      "id": 113,
+      "question": "🎂 Age Calculator\nBorn on: 15 August 2005\nToday: 14 March 2026\nCalculate the exact age in years, months and days.",
+      "hint": "Use the datetime module. Subtract birth date from today using date objects.",
+      "solution": "from datetime import date\n\nbirth = date(2005, 8, 15)\ntoday = date(2026, 3, 14)\n\nyears = today.year - birth.year\nmonths = today.month - birth.month\ndays = today.day - birth.day\n\nif days < 0:\n    months -= 1\n    days += 30\nif months < 0:\n    years -= 1\n    months += 12\n\nprint(f'Age: {years} years, {months} months, {days} days')"
+    },
+    {
+      "id": 114,
+      "question": "🔁 Duplicate Word Finder\nInput: 'the cat sat on the mat and the cat'\nOutput: Find all duplicate words and how many times they appear.",
+      "hint": "Split the sentence, use a dictionary to count, then filter for count > 1",
+      "solution": "sentence = 'the cat sat on the mat and the cat'\nwords = sentence.split()\ncount = {}\nfor word in words:\n    count[word] = count.get(word, 0) + 1\n\nprint('Duplicate words:')\nfor word, freq in count.items():\n    if freq > 1:\n        print(f'  {word}: {freq} times')"
+    },
+    {
+      "id": 115,
+      "question": "🧱 Number to Words\nConvert single digit numbers to words.\nInput: 4\nOutput: 'Four'\nHandle 0-9.",
+      "hint": "Create a list where index = number, value = word. Use the number as index.",
+      "solution": "words = ['Zero','One','Two','Three','Four','Five','Six','Seven','Eight','Nine']\n\ndef num_to_word(n):\n    if 0 <= n <= 9:\n        return words[n]\n    return 'Out of range'\n\nfor i in range(10):\n    print(num_to_word(i))"
+    },
+    {
+      "id": 116,
+      "question": "🌀 Spiral Number Pattern\nPrint numbers 1-9 in a 3x3 grid:\n1 2 3\n4 5 6\n7 8 9",
+      "hint": "Use a 2D list and fill it row by row using a counter variable",
+      "solution": "n = 3\ncounter = 1\nfor i in range(n):\n    row = []\n    for j in range(n):\n        row.append(counter)\n        counter += 1\n    print(' '.join(str(x) for x in row))"
+    },
+    {
+      "id": 117,
+      "question": "📱 Username Validator\nRules: 3-15 characters, only letters/numbers/underscore, must start with a letter.\nTest: 'aryan_99', '123user', 'hi', 'valid_user_name_that_is_too_long'",
+      "hint": "Check length, check first character with isalpha(), check remaining chars with isalnum() or == '_'",
+      "solution": "def validate_username(username):\n    if not (3 <= len(username) <= 15):\n        return 'Invalid: must be 3-15 characters'\n    if not username[0].isalpha():\n        return 'Invalid: must start with a letter'\n    for c in username:\n        if not (c.isalnum() or c == '_'):\n            return 'Invalid: only letters, numbers, underscore allowed'\n    return 'Valid username'\n\nfor name in ['aryan_99', '123user', 'hi', 'valid_user_name_that_is_too_long']:\n    print(f'{name}: {validate_username(name)}')"
+    },
+    {
+      "id": 118,
+      "question": "💰 Simple Interest & Compound Interest\nPrincipal: ₹10,000 | Rate: 8% | Time: 3 years\nCalculate both Simple Interest and Compound Interest.",
+      "hint": "SI = P*R*T/100. CI = P*(1+R/100)^T - P",
+      "solution": "P = 10000\nR = 8\nT = 3\n\nSI = P * R * T / 100\nCI = P * (1 + R/100)**T - P\n\nprint(f'Simple Interest: ₹{SI:.2f}')\nprint(f'Compound Interest: ₹{CI:.2f}')\nprint(f'SI Total: ₹{P + SI:.2f}')\nprint(f'CI Total: ₹{P + CI:.2f}')"
+    },
+    {
+      "id": 119,
+      "question": "🔢 Number Pattern - Diamond\nPrint a diamond pattern of size 5:\n    *\n   ***\n  *****\n   ***\n    *",
+      "hint": "Upper half is a pyramid, lower half is an inverted pyramid. Combine both.",
+      "solution": "n = 5\nfor i in range(1, n + 1, 2):\n    print(' ' * ((n - i) // 2) + '*' * i)\nfor i in range(n - 2, 0, -2):\n    print(' ' * ((n - i) // 2) + '*' * i)"
+    },
+    {
+      "id": 120,
+      "question": "🗂️ Word Frequency Counter with Sorting\nInput: 'banana apple cherry apple banana apple'\nOutput: Print words sorted by frequency (most to least frequent)\napple: 3\nbanana: 2\ncherry: 1",
+      "hint": "Count frequencies with a dict, then sort by value in reverse order",
+      "solution": "sentence = 'banana apple cherry apple banana apple'\nwords = sentence.split()\nfreq = {}\nfor word in words:\n    freq[word] = freq.get(word, 0) + 1\n\nsorted_freq = sorted(freq.items(), key=lambda x: x[1], reverse=True)\nfor word, count in sorted_freq:\n    print(f'{word}: {count}')"
+    },
+    {
+      "id": 121,
+      "question": "🎯 Target Sum Finder\nGiven list [2, 7, 4, 1, 8, 3] and target = 9\nFind ALL pairs that add up to the target.",
+      "hint": "Use two nested loops to check all pairs. Skip duplicate pairs using i < j condition.",
+      "solution": "nums = [2, 7, 4, 1, 8, 3]\ntarget = 9\nfound = []\nfor i in range(len(nums)):\n    for j in range(i + 1, len(nums)):\n        if nums[i] + nums[j] == target:\n            found.append((nums[i], nums[j]))\n\nprint(f'Pairs that sum to {target}:')\nfor pair in found:\n    print(pair)"
+    },
+    {
+      "id": 122,
+      "question": "🏪 Shopping Cart\nItems: [('apple',30,3), ('milk',60,2), ('bread',40,1)]\nFormat: (name, price, quantity)\nCalculate: subtotal per item, total bill, and apply 10% discount if bill > 200.",
+      "hint": "Multiply price * quantity for each item. Sum all subtotals. Apply discount with an if check.",
+      "solution": "cart = [('apple', 30, 3), ('milk', 60, 2), ('bread', 40, 1)]\ntotal = 0\nprint('--- Shopping Cart ---')\nfor name, price, qty in cart:\n    subtotal = price * qty\n    total += subtotal\n    print(f'{name}: ₹{price} x {qty} = ₹{subtotal}')\n\nprint(f'Subtotal: ₹{total}')\nif total > 200:\n    discount = total * 0.10\n    total -= discount\n    print(f'Discount (10%): -₹{discount:.2f}')\nprint(f'Total Bill: ₹{total:.2f}')"
+    },
+    {
+      "id": 123,
+      "question": "🔤 Title Case Converter (Manual)\nInput: 'the quick brown fox'\nOutput: 'The Quick Brown Fox'\nDo NOT use .title() — build it manually.",
+      "hint": "Split the sentence, capitalize the first letter of each word using word[0].upper() + word[1:]",
+      "solution": "sentence = 'the quick brown fox'\nwords = sentence.split()\nresult = []\nfor word in words:\n    capitalized = word[0].upper() + word[1:]\n    result.append(capitalized)\nprint(' '.join(result))"
+    },
+    {
+      "id": 124,
+      "question": "⏰ Time Converter\nInput: 3661 seconds\nOutput: 1 hour, 1 minute, 1 second\n\nConvert total seconds into hours, minutes and seconds.",
+      "hint": "Use integer division // and modulus % to extract hours, minutes, seconds",
+      "solution": "total_seconds = 3661\nhours = total_seconds // 3600\nremaining = total_seconds % 3600\nminutes = remaining // 60\nseconds = remaining % 60\nprint(f'{hours} hour(s), {minutes} minute(s), {seconds} second(s)')"
+    },
+    {
+      "id": 125,
+      "question": "🎲 Dice Roller Simulator\nSimulate rolling two dice 10 times.\nPrint each result and count how many times the sum was 7.",
+      "hint": "Use random.randint(1,6) for each die. Count using a variable when sum == 7.",
+      "solution": "import random\n\ncount_seven = 0\nfor i in range(10):\n    d1 = random.randint(1, 6)\n    d2 = random.randint(1, 6)\n    total = d1 + d2\n    print(f'Roll {i+1}: {d1} + {d2} = {total}')\n    if total == 7:\n        count_seven += 1\n\nprint(f'\\nSum was 7 a total of {count_seven} times')"
+    },
+    {
+      "id": 126,
+      "question": "🔐 Password Strength Checker\nCheck if a password is Weak / Medium / Strong.\nStrong: 8+ chars, has uppercase, lowercase, digit, special char.\nMedium: meets 3 of the 4 conditions.\nWeak: meets fewer than 3.",
+      "hint": "Check each condition separately using any() with a loop. Count how many conditions are met.",
+      "solution": "def check_password(pwd):\n    conditions = [\n        len(pwd) >= 8,\n        any(c.isupper() for c in pwd),\n        any(c.islower() for c in pwd),\n        any(c.isdigit() for c in pwd),\n        any(c in '!@#$%^&*' for c in pwd)\n    ]\n    score = sum(conditions)\n    if score == 5:\n        return 'Strong 💪'\n    elif score >= 3:\n        return 'Medium 🟡'\n    else:\n        return 'Weak ❌'\n\nfor pwd in ['hello', 'Hello123', 'Hello@123!']:\n    print(f'{pwd}: {check_password(pwd)}')"
+    },
+    {
+      "id": 127,
+      "question": "🧩 Matrix Transpose\nInput:\n[[1,2,3],\n [4,5,6],\n [7,8,9]]\nOutput: Rows become columns and columns become rows.",
+      "hint": "Use zip(*matrix) to transpose, or nested loops to swap [i][j] with [j][i]",
+      "solution": "matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\ntransposed = [list(row) for row in zip(*matrix)]\nfor row in transposed:\n    print(row)"
+    },
+    {
+      "id": 128,
+      "question": "📈 Stock Profit Calculator\nPrices over 7 days: [100, 113, 98, 120, 115, 130, 125]\nFind the best day to buy and sell for maximum profit.",
+      "hint": "Track the minimum price seen so far. For each day, compute profit if sold today. Track max profit.",
+      "solution": "prices = [100, 113, 98, 120, 115, 130, 125]\nmin_price = prices[0]\nbuy_day = 0\nmax_profit = 0\nbest_buy = 0\nbest_sell = 0\n\nfor i in range(1, len(prices)):\n    if prices[i] < min_price:\n        min_price = prices[i]\n        buy_day = i\n    profit = prices[i] - min_price\n    if profit > max_profit:\n        max_profit = profit\n        best_buy = buy_day\n        best_sell = i\n\nprint(f'Buy on day {best_buy + 1} at ₹{prices[best_buy]}')\nprint(f'Sell on day {best_sell + 1} at ₹{prices[best_sell]}')\nprint(f'Max Profit: ₹{max_profit}')"
+    },
+    {
+      "id": 129,
+      "question": "🌈 Color Mixer\nPrimary colors: Red, Blue, Yellow.\nIf user gives two colors, print the mixed color:\nRed+Blue=Purple, Blue+Yellow=Green, Red+Yellow=Orange.\nTest with: ('Red','Blue'), ('Blue','Yellow'), ('Red','Yellow'), ('Red','Red')",
+      "hint": "Use a dictionary with frozenset keys so order doesn't matter: frozenset({'Red','Blue'})",
+      "solution": "mixes = {\n    frozenset({'Red', 'Blue'}): 'Purple',\n    frozenset({'Blue', 'Yellow'}): 'Green',\n    frozenset({'Red', 'Yellow'}): 'Orange'\n}\n\ndef mix(c1, c2):\n    if c1 == c2:\n        return c1 + ' (same color)'\n    return mixes.get(frozenset({c1, c2}), 'Unknown mix')\n\npairs = [('Red','Blue'), ('Blue','Yellow'), ('Red','Yellow'), ('Red','Red')]\nfor a, b in pairs:\n    print(f'{a} + {b} = {mix(a, b)}')"
+    },
+    {
+      "id": 130,
+      "question": "🔃 Anagram Grouper\nGroup these words by anagram families:\n['eat', 'tea', 'tan', 'ate', 'nat', 'bat']\nOutput:\n['eat', 'tea', 'ate']\n['tan', 'nat']\n['bat']",
+      "hint": "Sort each word's letters as a key. Group words with the same sorted key into a dictionary.",
+      "solution": "words = ['eat', 'tea', 'tan', 'ate', 'nat', 'bat']\ngroups = {}\nfor word in words:\n    key = ''.join(sorted(word))\n    if key not in groups:\n        groups[key] = []\n    groups[key].append(word)\n\nfor group in groups.values():\n    print(group)"
+    }
+  ],
+  "advanced": [
+    {
+      "id": 201,
+      "question": "Write a recursive function to calculate factorial",
+      "hint": "Base case: if n==1 return 1. Recursive: return n * factorial(n-1)",
+      "solution": "def factorial(n):\n    if n == 1 or n == 0:\n        return 1\n    return n * factorial(n - 1)\n\nprint(factorial(6))"
+    },
+    {
+      "id": 202,
+      "question": "Use list comprehension to create squares of 1 to 10",
+      "hint": "Syntax: [expression for item in iterable]",
+      "solution": "squares = [x**2 for x in range(1, 11)]\nprint(squares)"
+    },
+    {
+      "id": 203,
+      "question": "Create a class 'Dog' with name and breed, and a method bark()",
+      "hint": "Use class keyword, __init__ for constructor, self for instance variables",
+      "solution": "class Dog:\n    def __init__(self, name, breed):\n        self.name = name\n        self.breed = breed\n\n    def bark(self):\n        print(f'{self.name} says: Woof!')\n\nd = Dog('Bruno', 'Labrador')\nd.bark()"
+    },
+    {
+      "id": 204,
+      "question": "Demonstrate inheritance: Animal class with Dog subclass",
+      "hint": "Use class Child(Parent). Call parent __init__ with super()",
+      "solution": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\n    def speak(self):\n        print('Some sound')\n\nclass Dog(Animal):\n    def speak(self):\n        print(f'{self.name} says Woof!')\n\nd = Dog('Bruno')\nd.speak()"
+    },
+    {
+      "id": 205,
+      "question": "Handle multiple exceptions: ValueError and TypeError",
+      "hint": "Use multiple except blocks or except (Error1, Error2)",
+      "solution": "try:\n    x = int('hello')\nexcept ValueError:\n    print('Invalid value!')\nexcept TypeError:\n    print('Wrong type!')"
+    },
+    {
+      "id": 206,
+      "question": "Use map() to double all numbers in [1, 2, 3, 4, 5]",
+      "hint": "map(function, iterable) applies function to each element",
+      "solution": "nums = [1, 2, 3, 4, 5]\nresult = list(map(lambda x: x * 2, nums))\nprint(result)"
+    },
+    {
+      "id": 207,
+      "question": "Implement bubble sort on [64, 34, 25, 12, 22]",
+      "hint": "Compare adjacent elements and swap if out of order. Repeat n times.",
+      "solution": "arr = [64, 34, 25, 12, 22]\nn = len(arr)\nfor i in range(n):\n    for j in range(0, n-i-1):\n        if arr[j] > arr[j+1]:\n            arr[j], arr[j+1] = arr[j+1], arr[j]\nprint(arr)"
+    },
+    {
+      "id": 208,
+      "question": "Implement binary search on a sorted list",
+      "hint": "Compare target with middle element, search left or right half",
+      "solution": "def binary_search(arr, target):\n    low, high = 0, len(arr) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n\narr = [1, 3, 5, 7, 9, 11]\nprint(binary_search(arr, 7))"
+    },
+    {
+      "id": 209,
+      "question": "Write a decorator that prints execution time of a function",
+      "hint": "Use time.time() before and after calling the function inside the wrapper",
+      "solution": "import time\n\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        end = time.time()\n        print(f'{func.__name__} took {end - start:.4f} seconds')\n        return result\n    return wrapper\n\n@timer\ndef slow_function():\n    total = 0\n    for i in range(1000000):\n        total += i\n    return total\n\nslow_function()"
+    },
+    {
+      "id": 210,
+      "question": "Implement memoization for Fibonacci",
+      "hint": "Store already computed results in a dictionary to avoid recomputation",
+      "solution": "memo = {}\ndef fib(n):\n    if n in memo:\n        return memo[n]\n    if n <= 1:\n        return n\n    memo[n] = fib(n-1) + fib(n-2)\n    return memo[n]\n\nprint(fib(30))"
+    },
+    {
+      "id": 211,
+      "question": "Implement quicksort on [10, 7, 8, 9, 1, 5]",
+      "hint": "Pick a pivot, partition into < pivot and > pivot, recurse",
+      "solution": "def quicksort(arr):\n    if len(arr) <= 1:\n        return arr\n    pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x < pivot]\n    middle = [x for x in arr if x == pivot]\n    right = [x for x in arr if x > pivot]\n    return quicksort(left) + middle + quicksort(right)\n\nprint(quicksort([10, 7, 8, 9, 1, 5]))"
+    },
+    {
+      "id": 212,
+      "question": "Implement a simple linked list with insert and display",
+      "hint": "Create a Node class with value and next pointer",
+      "solution": "class Node:\n    def __init__(self, data):\n        self.data = data\n        self.next = None\n\nclass LinkedList:\n    def __init__(self):\n        self.head = None\n\n    def insert(self, data):\n        new = Node(data)\n        if not self.head:\n            self.head = new\n        else:\n            curr = self.head\n            while curr.next:\n                curr = curr.next\n            curr.next = new\n\n    def display(self):\n        curr = self.head\n        while curr:\n            print(curr.data, end=' -> ')\n            curr = curr.next\n        print('None')\n\nll = LinkedList()\nll.insert(1)\nll.insert(2)\nll.insert(3)\nll.display()"
+    },
+    {
+      "id": 213,
+      "question": "Create a generator function that yields Fibonacci numbers",
+      "hint": "Use yield inside the function. Keep track of previous two values.",
+      "solution": "def fib_gen(n):\n    a, b = 0, 1\n    for _ in range(n):\n        yield a\n        a, b = b, a + b\n\nfor num in fib_gen(10):\n    print(num, end=' ')"
+    },
+    {
+      "id": 214,
+      "question": "Find all permutations of 'ABC'",
+      "hint": "Import itertools and use itertools.permutations()",
+      "solution": "from itertools import permutations\nresult = list(permutations('ABC'))\nfor p in result:\n    print(''.join(p))"
+    },
+    {
+      "id": 215,
+      "question": "Implement merge sort on [38, 27, 43, 3, 9, 82, 10]",
+      "hint": "Divide in half, sort each half, merge back together",
+      "solution": "def merge_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    mid = len(arr) // 2\n    left = merge_sort(arr[:mid])\n    right = merge_sort(arr[mid:])\n    result = []\n    i = j = 0\n    while i < len(left) and j < len(right):\n        if left[i] < right[j]:\n            result.append(left[i])\n            i += 1\n        else:\n            result.append(right[j])\n            j += 1\n    result.extend(left[i:])\n    result.extend(right[j:])\n    return result\n\nprint(merge_sort([38, 27, 43, 3, 9, 82, 10]))"
+    }
+  ]
+}
