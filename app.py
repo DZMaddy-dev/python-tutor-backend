@@ -1,131 +1,21 @@
 import json
 import subprocess
 import re
-import sqlite3
-from flask import Flask, request, jsonify, session
+from flask import Flask, request, jsonify
 from flask_cors import CORS
-from flask_bcrypt import Bcrypt
-import uuid
 
 app = Flask(__name__)
-app.secret_key = "python-tutor-secret-2024"
-app.config["SESSION_COOKIE_SAMESITE"] = "None"
-app.config["SESSION_COOKIE_SECURE"] = True
-CORS(app, supports_credentials=True, origins=[
+CORS(app, origins=[
     "http://localhost:3000",
-    "https://python-tutor-frontend.vercel.app",
-    "https://python-tutor-frontend-git-main-dzmaddy-devs-projects.vercel.app",
-    "https://python-tutor-frontend-4l9hjmkmk-dzmaddy-devs-projects.vercel.app"
+    "https://python-ai-tutor-37ba0.web.app"
 ])
-bcrypt = Bcrypt(app)
 
 # -----------------------------
-# Database Setup
+# Home Route
 # -----------------------------
-def init_db():
-    conn = sqlite3.connect("tutor.db")
-    c = conn.cursor()
-    c.execute("""
-        CREATE TABLE IF NOT EXISTS users (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            username TEXT UNIQUE NOT NULL,
-            password TEXT NOT NULL
-        )
-    """)
-    c.execute("""
-        CREATE TABLE IF NOT EXISTS progress (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            username TEXT NOT NULL,
-            type TEXT NOT NULL,
-            item_id TEXT NOT NULL,
-            UNIQUE(username, type, item_id)
-        )
-    """)
-    conn.commit()
-    conn.close()
-
-init_db()
-
-# -----------------------------
-# Auth Routes
-# -----------------------------
-@app.route("/register", methods=["POST"])
-def register():
-    data = request.json
-    username = data.get("username", "").strip()
-    password = data.get("password", "").strip()
-    if not username or not password:
-        return jsonify({"error": "Username and password are required."})
-    if len(username) < 3:
-        return jsonify({"error": "Username must be at least 3 characters."})
-    if len(password) < 4:
-        return jsonify({"error": "Password must be at least 4 characters."})
-    hashed = bcrypt.generate_password_hash(password).decode("utf-8")
-    try:
-        conn = sqlite3.connect("tutor.db")
-        c = conn.cursor()
-        c.execute("INSERT INTO users (username, password) VALUES (?, ?)", (username, hashed))
-        conn.commit()
-        conn.close()
-        return jsonify({"message": f"Account created! Welcome, {username}."})
-    except sqlite3.IntegrityError:
-        return jsonify({"error": "Username already taken. Try another."})
-
-@app.route("/share", methods=["POST"])
-def share_code():
-    data = request.json
-    code = data.get("code", "")
-    share_id = str(uuid.uuid4())[:8]
-    conn = sqlite3.connect("tutor.db")
-    c = conn.cursor()
-    c.execute("""
-        CREATE TABLE IF NOT EXISTS shared_code (
-            id TEXT PRIMARY KEY,
-            code TEXT NOT NULL,
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-        )
-    """)
-    c.execute("INSERT INTO shared_code (id, code) VALUES (?, ?)", (share_id, code))
-    conn.commit()
-    conn.close()
-    return jsonify({"id": share_id})
-
-@app.route("/share/<share_id>")
-def get_shared_code(share_id):
-    conn = sqlite3.connect("tutor.db")
-    c = conn.cursor()
-    c.execute("SELECT code FROM shared_code WHERE id = ?", (share_id,))
-    row = c.fetchone()
-    conn.close()
-    if not row:
-        return jsonify({"error": "Code not found."})
-    return jsonify({"code": row[0]})    
-
-@app.route("/login", methods=["POST"])
-def login():
-    data = request.json
-    username = data.get("username", "").strip()
-    password = data.get("password", "").strip()
-    conn = sqlite3.connect("tutor.db")
-    c = conn.cursor()
-    c.execute("SELECT password FROM users WHERE username = ?", (username,))
-    row = c.fetchone()
-    conn.close()
-    if not row or not bcrypt.check_password_hash(row[0], password):
-        return jsonify({"error": "Invalid username or password."})
-    session["username"] = username
-    return jsonify({"message": f"Welcome back, {username}!", "username": username})
-
-@app.route("/logout", methods=["POST"])
-def logout():
-    session.clear()
-    return jsonify({"message": "Logged out."})
-
-@app.route("/me")
-def me():
-    if "username" in session:
-        return jsonify({"loggedIn": True, "username": session["username"]})
-    return jsonify({"loggedIn": False})
+@app.route("/")
+def home():
+    return "Python AI Tutor Backend Running"
 
 # -----------------------------
 # Local Python Error Explainer
@@ -150,7 +40,7 @@ def explain_error(error_message):
     elif "ValueError" in error_message:
         return "ValueError: You passed the right type but an invalid value (e.g., int('hello'))."
     elif "ModuleNotFoundError" in error_message:
-        return "ModuleNotFoundError: You tried to import a module that isn't installed. Use pip install <module_name>."
+        return "ModuleNotFoundError: You tried to import a module that isn't installed."
     elif "RecursionError" in error_message:
         return "RecursionError: Your function is calling itself too many times. Check your base case."
     elif "FileNotFoundError" in error_message:
@@ -274,17 +164,9 @@ def fix_code_locally(code):
         fixed.append(stripped)
 
     result = "\n".join(fixed)
-    # FIX 9: Remove semicolons at end of lines
     result = re.sub(r';\s*\n', '\n', result)
     result = re.sub(r';\s*$', '', result)
     return result
-
-# -----------------------------
-# Home Route
-# -----------------------------
-@app.route("/")
-def home():
-    return "Python AI Tutor Backend Running"
 
 # -----------------------------
 # Run Python Code
