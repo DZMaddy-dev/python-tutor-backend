@@ -5,6 +5,7 @@ import sqlite3
 from flask import Flask, request, jsonify, session
 from flask_cors import CORS
 from flask_bcrypt import Bcrypt
+import uuid
 
 app = Flask(__name__)
 app.secret_key = "python-tutor-secret-2024"
@@ -69,6 +70,36 @@ def register():
         return jsonify({"message": f"Account created! Welcome, {username}."})
     except sqlite3.IntegrityError:
         return jsonify({"error": "Username already taken. Try another."})
+
+@app.route("/share", methods=["POST"])
+def share_code():
+    data = request.json
+    code = data.get("code", "")
+    share_id = str(uuid.uuid4())[:8]
+    conn = sqlite3.connect("tutor.db")
+    c = conn.cursor()
+    c.execute("""
+        CREATE TABLE IF NOT EXISTS shared_code (
+            id TEXT PRIMARY KEY,
+            code TEXT NOT NULL,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    """)
+    c.execute("INSERT INTO shared_code (id, code) VALUES (?, ?)", (share_id, code))
+    conn.commit()
+    conn.close()
+    return jsonify({"id": share_id})
+
+@app.route("/share/<share_id>")
+def get_shared_code(share_id):
+    conn = sqlite3.connect("tutor.db")
+    c = conn.cursor()
+    c.execute("SELECT code FROM shared_code WHERE id = ?", (share_id,))
+    row = c.fetchone()
+    conn.close()
+    if not row:
+        return jsonify({"error": "Code not found."})
+    return jsonify({"code": row[0]})    
 
 @app.route("/login", methods=["POST"])
 def login():
