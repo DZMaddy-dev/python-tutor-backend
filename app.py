@@ -8,7 +8,10 @@ from flask_bcrypt import Bcrypt
 
 app = Flask(__name__)
 app.secret_key = "python-tutor-secret-2024"
-CORS(app, supports_credentials=True, origins=["http://localhost:3000"])
+CORS(app, supports_credentials=True, origins=[
+    "http://localhost:3000",
+    "https://python-tutor-frontend-4l9hjmkmk-dzmaddy-devs-projects.vercel.app"
+])
 bcrypt = Bcrypt(app)
 
 # -----------------------------
